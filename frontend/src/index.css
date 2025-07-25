@@ -1,0 +1,298 @@
+/* index.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: rgb(0, 21, 45);
+    --color2: rgb(0, 46, 84);
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    margin: 0px;
+    max-width: 1800px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.open-sans-normal {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size:contain;
+    
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.head1 {
+    font-size: 1.5rem; 
+    color: rgb(0, 21, 45); 
+    font-weight: 700; 
+}
+
+@keyframes anim1 {
+    from {  width: 0rem; }
+    to {  width: 12.2rem; }
+}
+
+#myname {
+    text-align: left;
+    display: inline-block;
+    width: 12.2rem;
+    font-size: 2rem;
+    display: block;
+    font-family: monospace;
+    animation: anim1 3s steps(9)  alternate 1;
+    white-space: nowrap;
+    overflow: hidden;
+    /* border: 1px solid black; */
+    letter-spacing: .25rem;
+}
+
+.nav-link {
+    text-decoration: none; color: var(--color1);
+    font-weight: 600;
+}
+
+#photo {
+    height: 15rem;
+    width: 11.5rem;
+    transition: transform 1s;
+}
+
+#photo:hover {
+    transform: translateY(-.3rem);
+}
+
+
+
+.row-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+#about {
+    margin-top: 4rem;
+    text-align: center;
+    
+    border-radius: .5rem;
+}
+
+.project-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.project-card {
+    /* border: 1px solid black; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: .5rem;
+    background-color: rgb(0, 46, 84, .3);
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-container {
+    gap: 1rem;
+}
+
+.experience-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    
+}
+
+.certi-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    
+}
+
+.skill-card {
+    width: 18rem;
+    box-shadow: 0 .2rem .3rem 0 rgba(0, 0, 0, 0.2), 0 .2rem 1rem 0 rgba(0, 0, 0, 0.2);
+    padding: .3rem;
+    background-color: rgb(0, 46, 84, .3);
+    flex-grow: 1;
+    border-radius: .5rem;
+}
+
+
+.btn1 {
+    background-color: var(--color2);
+    border-radius: .5rem;
+    height: 2rem;
+    width: 5rem;
+    margin-top: auto;
+    margin-left: auto;
+    font-size: .75rem;
+    padding: 0px;
+    color: white;
+    transition: color .5s, background-color .5s, font-weight .5s;
+}
+
+.btn1:hover {
+    background-color: white;
+    color: var(--color2);
+    font-weight: 600;
+}
+
+
+.aha {
+    font-size: .75rem;
+    margin-top: .5rem; 
+    margin-bottom: .5rem;
+}
+
+#footerl a{
+    text-decoration: none;
+    color: white;
+}
+
+#footerl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+    font-size: .7rem;
+}
+
+.btn2 {
+    background-color: white;
+    color: var(--color1);
+    font-size: .8rem;
+    padding: .5rem;
+}
+
+/* ################################# Tablet ################################### */
+
+
+
+@media  screen and ( max-width: 1000px ) and (min-width: 600px) {
+    
+    html {
+        font-size: 16px;
+    }
+
+    .banner {
+        padding-left: 100px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .experience-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .certi-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    
+}
+
+    
+}
+
+nav {
+    height: 5rem; 
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center;
+}
+
+
+navbutton {
+    display: none;
+}
+
+
+/* #################################### Mobile ################################ */
+
+
+@media screen and (max-width: 600px) {
+
+    navbutton {
+        display: block;
+        width: 50%;
+        background-color: var(--color1);
+        height: 3rem;
+    }
+
+    nav {
+        display: none;
+        background-color: red;
+    }
+
+    html {
+        font-size: 12px;
+    }
+
+    header {
+        flex-direction: column-reverse;
+    }
+
+    .banner {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .experience-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #footerl {
+        
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: .5rem;
+        font-size: .5rem;
+    }
+
+    .certi-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    
+    }
+
+}
+
+
