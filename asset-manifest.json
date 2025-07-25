@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.4168c036.css",
-    "main.js": "/portfolio/static/js/main.5da49001.js",
+    "main.css": "/portfolio/static/css/main.a690ae1c.css",
+    "main.js": "/portfolio/static/js/main.d9dba918.js",
     "static/js/453.8ab44547.chunk.js": "/portfolio/static/js/453.8ab44547.chunk.js",
+    "static/media/Md Shoaib Tasrif Emon.jpg": "/portfolio/static/media/Md Shoaib Tasrif Emon.9e1f25d38eb10b2d4579.jpg",
     "index.html": "/portfolio/index.html",
-    "main.4168c036.css.map": "/portfolio/static/css/main.4168c036.css.map",
-    "main.5da49001.js.map": "/portfolio/static/js/main.5da49001.js.map",
+    "main.a690ae1c.css.map": "/portfolio/static/css/main.a690ae1c.css.map",
+    "main.d9dba918.js.map": "/portfolio/static/js/main.d9dba918.js.map",
     "453.8ab44547.chunk.js.map": "/portfolio/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4168c036.css",
-    "static/js/main.5da49001.js"
+    "static/css/main.a690ae1c.css",
+    "static/js/main.d9dba918.js"
   ]
 }
