@@ -9,8 +9,17 @@
     to { transform: translateX(0); }
 }
 
+@keyframes slideout {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
 .slidein {
-    animation: slidein .5s forwards;
+    animation: slidein .3s forwards;
+}
+
+.slideout {
+    animation: slideout .3s forwards;
 }
 
 * {
@@ -324,6 +333,7 @@ navbutton {
 
     #left-slide {
         position: fixed; 
+        
         top: 3rem; 
         height : 100%; 
         width: 100%; 

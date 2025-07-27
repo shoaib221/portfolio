@@ -15,41 +15,56 @@ export const Home = () => {
 
     function SlideIn()
     {
-        if( slideNav )
-        {
-            setSlideNav(false);
-            return
-        }
-        setSlideNav(true)
         
-        setTimeout( () => {
+        
+        
             let elem = document.getElementById('left-slide')
-            elem.classList.add('slidein')
-        } , 2)
+            if( elem.style.display === 'none' ) {
+                elem.classList.remove('slideout')
+                elem.style.display = 'flex'
+                
+                elem.classList.add('slidein')
+
+            } else {
+                elem.classList.remove( 'slidein' )
+                elem.classList.add('slideout')
+                setTimeout( ()=> { elem.style.display = 'none' }, 300 )
+                
+            }
+            
+        
     }
 
     function NavPos ( pos )
     {
-        setSlideNav(false)
+        
         let elem = document.getElementById(pos)
+        let elem2 = document.getElementById('left-slide')
+        elem2.classList.remove( 'slidein' )
+        elem2.classList.add('slideout')
+        setTimeout( ()=> { elem2.style.display = 'none' }, 300 )
         setTimeout(()=> {
-            elem.scrollIntoView()
-        }, 5)
+            elem.scrollIntoView({
+                behavior: 'smooth'
+            })
+        }, 300)
     }
 	
 	return (
 		<>
             <div className='small-nav' >
-                <button  style={{ height: '100%' }} onClick={SlideIn} >Expand</button>
+                <button  style={{ height: '100%', marginLeft: '1rem' }} onClick={SlideIn} >
+                Menu
+                </button>
             </div>
 
-            { slideNav && <div id="left-slide"   >
-                <button onClick={()=> NavPos('about')} > About </button>
-                <button onClick={() => NavPos('projects')} > Projects </button>
-                <button onClick={()=> NavPos( 'skills' )} > Skills </button>
-                <button onClick={()=> NavPos('certifications' )} > Certifications </button>
-                <button onClick={()=> NavPos( 'contact' )} > Contact </button>
-            </div> }
+            <div id="left-slide" style={{ display: 'none' }}  >
+                <button style={{ height: '3rem', marginTop: '1rem' }}  onClick={()=> NavPos('about')} > About </button>
+                <button style={{ height: '3rem' }} onClick={() => NavPos('projects')} > Projects </button>
+                <button style={{ height: '3rem' }} onClick={()=> NavPos( 'skills' )} > Skills </button>
+                <button style={{ height: '3rem' }} onClick={()=> NavPos('certifications' )} > Certifications </button>
+                <button style={{ height: '3rem' }} onClick={()=> NavPos( 'contact' )} > Contact </button>
+            </div>
 
             <nav>
                 <a className='nav-link'  href="#about" >About</a>
