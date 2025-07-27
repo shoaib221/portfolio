@@ -23,6 +23,7 @@ body {
     max-width: 1800px; 
     margin-left: auto; 
     margin-right: auto;
+    
 }
 
 .open-sans-normal {
@@ -50,6 +51,8 @@ header {
     font-size: 1.5rem; 
     color: rgb(0, 21, 45); 
     font-weight: 700; 
+    text-align: center; 
+    margin-bottom: 1rem;
 }
 
 @keyframes anim1 {
@@ -80,6 +83,7 @@ header {
     height: 15rem;
     width: 11.5rem;
     transition: transform 1s;
+    background-color: red;
 }
 
 #photo:hover {
@@ -117,6 +121,20 @@ header {
 
 .skill-container {
     gap: 1rem;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.skill-card-header {
+    text-align: center; 
+    font-size: 1.2rem; 
+    margin-bottom: .5rem;
+}
+
+.skill-card-des {
+    text-align: center; 
+    font-size: .8rem;
 }
 
 .experience-container {
@@ -124,6 +142,18 @@ header {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     
+}
+
+#certifications {
+    margin-top: 4rem; 
+    margin-left: 2rem; 
+    margin-right: 2rem;
+}
+
+.head1 {
+    font-size: 1.5rem; 
+    text-align: center; 
+    margin-bottom: 1rem;
 }
 
 .certi-container {
@@ -169,6 +199,12 @@ header {
     margin-bottom: .5rem;
 }
 
+#footer {
+    margin-top: 4rem; 
+    background-color: rgb(0, 21, 45); 
+    color: white;
+}
+
 #footerl a{
     text-decoration: none;
     color: white;
@@ -187,6 +223,12 @@ header {
     color: var(--color1);
     font-size: .8rem;
     padding: .5rem;
+}
+
+#contact {
+    text-align: center; 
+    font-size: 1.5rem; 
+    margin-bottom: 2rem;
 }
 
 /* ################################# Tablet ################################### */
