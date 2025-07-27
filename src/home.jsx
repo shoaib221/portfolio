@@ -39,44 +39,52 @@ export const Home = () => {
 
 
             <section id="projects" style={{ marginTop: '4rem', marginLeft: '2rem', marginRight: '2rem' }} >
-            <div class="head1" style={{ textAlign: 'center', marginBottom: '1rem'}} > Projects </div>
-            <div class="project-container" style={{ display: 'grid' }}> 
+            <div className="head1" style={{ textAlign: 'center', marginBottom: '1rem'}} > Projects </div>
+            <div className="project-container" style={{ display: 'grid' }}> 
 
-                <div class="project-card" > 
+                <div className="project-card" > 
                     <div style={{ fontSize: '1.25rem', fontWeight: '600' }} > Tour Guide App </div>
-                    <p class="aha"  >
+                    <p className="aha"  >
                         A web app, along with API, made with Django web framework, HTML, CSS, jQuery and Postgresql database. This app allows users to search for their hotels/residences according to their preferred location, time and room quality and book those. Any user can advertise their hotels/ residences and allow those to be booked. I implemented user profiles, authentication, and searching algorithms in this app.
                     </p>
 
                     <div style={{ marginTop: 'auto' }}>
-                        <button class="btn1" onclick="window.open('https://github.com/shoaib221/Tour-Guide-App', '_blank' )" >
+                        <button className="btn1" onClick={ () => window.open('https://github.com/shoaib221/Tour-Guide-App', '_blank' ) } >
                             Source
                         </button> 
                     </div>
                     
                 </div>
-                <div class="project-card" > 
-                    <div style={{ fontSize: '1.25rem', fontWeight: '600' }} > Tour Guide App </div>
-                    <p class="aha"  >
-                        A web app, along with API, made with Django web framework, HTML, CSS, jQuery and Postgresql database. This app allows users to search for their hotels/residences according to their preferred location, time and room quality and book those. Any user can advertise their hotels/ residences and allow those to be booked. I implemented user profiles, authentication, and searching algorithms in this app.
+                <div className="project-card" > 
+                    <div style={{ fontSize: '1.25rem', fontWeight: '600' }} > Amazon Clone </div>
+                    <p className="aha"  >
+                        It is a clone of amazon.com made with HTML & CSS.
                     </p>
 
                     <div style={{ marginTop: 'auto' }}>
-                        <button class="btn1" onclick="window.open('https://github.com/shoaib221/Tour-Guide-App', '_blank' )" >
+                        <button className="btn1" onClick={ () => window.open('https://github.com/shoaib221/amazon', '_blank' ) } >
                             Source
+                        </button>
+
+                        <button className="btn1" onClick={ () =>  window.open('https://shoaib221.github.io/amazon', '_blank' ) } >
+                            Live
                         </button> 
                     </div>
                     
                 </div>
-                <div class="project-card" > 
-                    <div style={{ fontSize: '1.25rem', fontWeight: '600' }} > Tour Guide App </div>
-                    <p class="aha"  >
-                        A web app, along with API, made with Django web framework, HTML, CSS, jQuery and Postgresql database. This app allows users to search for their hotels/residences according to their preferred location, time and room quality and book those. Any user can advertise their hotels/ residences and allow those to be booked. I implemented user profiles, authentication, and searching algorithms in this app.
+                <div className="project-card" > 
+                    <div style={{ fontSize: '1.25rem', fontWeight: '600' }} > Flower Shop </div>
+                    <p className="aha"  >
+                        It is a template webpage for a flower shop made with HTML & CSS.
                     </p>
 
                     <div style={{ marginTop: 'auto' }}>
-                        <button class="btn1" onclick="window.open('https://github.com/shoaib221/Tour-Guide-App', '_blank' )" >
+                        <button className="btn1" onClick={ () => window.open('https://github.com/shoaib221/B12A02-Responsive-Flowers', '_blank' ) } >
                             Source
+                        </button> 
+
+                        <button className="btn1" onClick={ () => window.open('https://shoaib221.github.io/B12A02-Responsive-Flowers', '_blank' ) } >
+                            Live
                         </button> 
                     </div>
                     
@@ -95,25 +103,25 @@ export const Home = () => {
                 </div>
                 
                 <div className="skill-card" >
-                    <div className='skill-card-header'  > Competitve Programming </div>
+                    <div className='skill-card-header'  > MERN </div>
                     <p className='skill-card-des' >
-                        I have solved 2000+ programming problems on tpics including data structures, graph, dynamic programming & SQL. I have attended a few online contests and reached expert level on codeforces.
+                        I have 1+ years of experience in MongoDB, Express.js, React.js & Node.js while buildig some cool websites.
                     </p>
                 </div>
 
                 <div className="skill-card" >
-                    <div className='skill-card-header'  > Competitve Programming </div>
+                    <div className='skill-card-header'  > Django </div>
                     <p className='skill-card-des' >
-                        I have solved 2000+ programming problems on tpics including data structures, graph, dynamic programming & SQL. I have attended a few online contests and reached expert level on codeforces.
+                        I have 1+ year experience in django web framework while building a website for hotel booking. 
                     </p>
                 </div>
             </div>
         </section>
 
         <section id="certifications"   >
-            <div  class="head1"  >  Certifications </div>
-            <div class="certi-container" >
-                <div class="project-card" >
+            <div  className="head1"  >  Certifications </div>
+            <div className="certi-container" >
+                <div className="project-card" >
                     <div className='skill-card-header' > SQL Advanced </div>
 {/*                     
                     <iframe src="./photos/problem_solving_intermediate certificate.pdf" width="300" height="300"></iframe>
@@ -127,21 +135,20 @@ export const Home = () => {
                         Issued by Hackerrank <br/>on August 2023 
                     </p>
 
-                    <button class="btn1" style={{marginRight: 'auto'}} onclick="window.open('./photos/sql_advanced certificate.pdf', '_blank')" >
+                    <button className="btn1" style={{marginRight: 'auto'}} onClick={ () => window.open('./photos/sql_advanced certificate.pdf', '_blank') } >
                         View
                     </button>
 
                 </div>
 
-                <div class="project-card" >
+                <div className="project-card" >
                     <div className='skill-card-header' > Problem Solving <br/> (Intermediate) </div>
-                    
                     
                     <p className='skill-card-des' >
                         Issued by Hackerrank <br/>on August 2023 
                     </p>
 
-                    <button class="btn1" style={{marginRight: 'auto'}} onclick="window.open('./photos/problem_solving_intermediate certificate.pdf', '_blank')" >
+                    <button className="btn1" style={{marginRight: 'auto'}} onClick={ () => window.open('./photos/problem_solving_intermediate certificate.pdf', '_blank') } >
                         View
                     </button>
                 </div>
