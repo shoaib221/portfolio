@@ -6,12 +6,50 @@ import pcf from "./photos/cf.jpg"
 import pgh from "./photos/gh.jpg"
 import cpsi from './photos/problem_solving_intermediate_certificate.pdf'
 import csql from './photos/sql_advanced certificate.pdf'
+import pdfCV from './photos/Resume_Md_Shoaib_Tasrif.pdf'
+import { useState } from 'react'
+
 
 export const Home = () => {
-	
+	const [ slideNav, setSlideNav ] = useState(false)
+
+    function SlideIn()
+    {
+        if( slideNav )
+        {
+            setSlideNav(false);
+            return
+        }
+        setSlideNav(true)
+        
+        setTimeout( () => {
+            let elem = document.getElementById('left-slide')
+            elem.classList.add('slidein')
+        } , 2)
+    }
+
+    function NavPos ( pos )
+    {
+        setSlideNav(false)
+        let elem = document.getElementById(pos)
+        setTimeout(()=> {
+            elem.scrollIntoView()
+        }, 5)
+    }
 	
 	return (
 		<>
+            <div className='small-nav' >
+                <button  style={{ height: '100%' }} onClick={SlideIn} >Expand</button>
+            </div>
+
+            { slideNav && <div id="left-slide"   >
+                <button onClick={()=> NavPos('about')} > About </button>
+                <button onClick={() => NavPos('projects')} > Projects </button>
+                <button onClick={()=> NavPos( 'skills' )} > Skills </button>
+                <button onClick={()=> NavPos('certifications' )} > Certifications </button>
+                <button onClick={()=> NavPos( 'contact' )} > Contact </button>
+            </div> }
 
             <nav>
                 <a className='nav-link'  href="#about" >About</a>
@@ -22,7 +60,7 @@ export const Home = () => {
             </nav>
 
             <header>
-                <div class="nav-title" style={{ fontSize: "2rem", textAlign: "center", marginTop: "1rem" }}     >
+                <div className="nav-title" style={{ fontSize: "2rem", textAlign: "center", marginTop: "1rem" }}     >
                     <div style={{ marginLeft: "auto", marginRight: "auto" }} id="myname" >HI, I AM</div>
                     <div  style={{color:"rgb(0, 46, 84)", fontWeight: "800" }}  >MD <span style={{color: "rgb(0, 21, 45)" }} >SHOAIB</span> TASRIF</div>
                     <span style={{fontSize: "1.3rem" }} > Software Developer </span> 
@@ -31,11 +69,18 @@ export const Home = () => {
             </header>
 
             <section id="about"  >
-            <div style={{ fontSize: "1.5rem", color: "rgb(0, 21, 45)", fontWeight: "700" }} > About Me </div>
-            <p style={{ backgroundColor: "rgb(0, 46, 84, .3)", width: "80%", textAlign: 'center', margin: "auto", marginTop: "1rem",
-            boxShadow: "0 .2rem .3rem 0 rgba(0, 0, 0, 0.2), 0 .2rem 1rem 0 rgba(0, 0, 0, 0.2)", padding: ".5rem", borderRadius: '.5rem' }} >
-                I am a Software Engineering enthusiast with experience in competitve programming & web development. I am currently looking forward to landing a job which will keep me veryy busy.
-            </p>
+                <div style={{ fontSize: "1.5rem", color: "rgb(0, 21, 45)", fontWeight: "700" }} > About Me </div>
+                <p style={{ backgroundColor: "rgb(0, 46, 84, .3)", width: "80%", textAlign: 'center', margin: "auto", marginTop: "1rem",
+                boxShadow: "0 .2rem .3rem 0 rgba(0, 0, 0, 0.2), 0 .2rem 1rem 0 rgba(0, 0, 0, 0.2)", padding: ".5rem", borderRadius: '.5rem' }} >
+                    I am a Software Engineering enthusiast with experience in competitve programming & web development. I am currently looking forward to landing a job which will keep me veryy busy.
+                    <br/>
+                    <button className="btn1" style={{marginTop: '.5rem'}} onClick={ () => window.open(pdfCV, '_blank') } >
+                    MY CV
+                    </button>
+                </p>
+
+                
+
             </section>
 
 
@@ -180,7 +225,7 @@ export const Home = () => {
                 </div>
             </div>
         
-    </footer>
+        </footer>
 
 		</>
 	)

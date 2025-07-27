@@ -2,6 +2,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+/**********************   slide in ***************************/
+
+@keyframes slidein {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.slidein {
+    animation: slidein .5s forwards;
+}
+
 * {
     padding: 0px;
     border: 0px;
@@ -9,21 +20,23 @@
     box-sizing: border-box;
 }
 
+
 :root {
     --color1: rgb(0, 21, 45);
     --color2: rgb(0, 46, 84);
 }
 
+
 html {
     font-size: 20px;
 }
+
 
 body {
     margin: 0px;
     max-width: 1800px; 
     margin-left: auto; 
     margin-right: auto;
-    
 }
 
 .open-sans-normal {
@@ -74,9 +87,24 @@ header {
     letter-spacing: .25rem;
 }
 
+    nav {
+    height: 5rem; 
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center;
+}
+
+.small-nav {
+    display: none;
+}
+
 .nav-link {
     text-decoration: none; color: var(--color1);
     font-weight: 600;
+}
+
+navbutton {
+    display: none;
 }
 
 #photo {
@@ -232,12 +260,18 @@ header {
     margin-bottom: 2rem;
 }
 
+#left-slide {
+    display: none;
+}
+
 /* ################################# Tablet ################################### */
 
 
 
 @media  screen and ( max-width: 1000px ) and (min-width: 600px) {
     
+    
+
     html {
         font-size: 16px;
     }
@@ -263,22 +297,24 @@ header {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     
-}
+    }
 
-    
-}
 
-nav {
-    height: 5rem; 
-    display: flex; 
-    justify-content: space-evenly; 
-    align-items: center;
-}
 
 
 navbutton {
     display: none;
+
+
 }
+
+#left-slide {
+    display: none;
+}
+    
+}
+
+
 
 
 /* #################################### Mobile ################################ */
@@ -286,11 +322,25 @@ navbutton {
 
 @media screen and (max-width: 600px) {
 
-    navbutton {
-        display: block;
-        width: 50%;
+    #left-slide {
+        position: fixed; 
+        top: 3rem; 
+        height : 100%; 
+        width: 100%; 
         background-color: var(--color1);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .small-nav {
+        display: block;
+        position: fixed;
+        top: 0;
         height: 3rem;
+        width: 100%;
+        z-index: 2;
+        background-color: white;
     }
 
     nav {
@@ -304,6 +354,7 @@ navbutton {
 
     header {
         flex-direction: column-reverse;
+        margin-top: 3rem;
     }
 
     .banner {
