@@ -4,6 +4,8 @@ import photo2 from './photos/mongo.png'
 import pmail from './photos/mail.png'
 import pcf from "./photos/cf.jpg"
 import pgh from "./photos/gh.jpg"
+import cpsi from './photos/problem_solving_intermediate_certificate.pdf'
+import csql from './photos/sql_advanced certificate.pdf'
 
 export const Home = () => {
 	
@@ -123,7 +125,8 @@ export const Home = () => {
             <div className="certi-container" >
                 <div className="project-card" >
                     <div className='skill-card-header' > SQL Advanced </div>
-{/*                     
+                    
+                    {/*                     
                     <iframe src="./photos/problem_solving_intermediate certificate.pdf" width="300" height="300"></iframe>
                     <embed src="./photos/sql_advanced certificate.pdf" type="application/pdf" width="600px" height="500px" /> 
                     <a href="./photos/problem_solving_intermediate certificate.pdf" target="_blank" >rblm Solvng</a>
@@ -135,7 +138,7 @@ export const Home = () => {
                         Issued by Hackerrank <br/>on August 2023 
                     </p>
 
-                    <button className="btn1" style={{marginRight: 'auto'}} onClick={ () => window.open('./photos/sql_advanced certificate.pdf', '_blank') } >
+                    <button className="btn1" style={{marginRight: 'auto'}} onClick={ () => window.open(csql, '_blank') } >
                         View
                     </button>
 
@@ -148,7 +151,7 @@ export const Home = () => {
                         Issued by Hackerrank <br/>on August 2023 
                     </p>
 
-                    <button className="btn1" style={{marginRight: 'auto'}} onClick={ () => window.open('./photos/problem_solving_intermediate certificate.pdf', '_blank') } >
+                    <button className="btn1" style={{marginRight: 'auto'}} onClick={ () => window.open(cpsi, '_blank') } >
                         View
                     </button>
                 </div>
