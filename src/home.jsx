@@ -59,18 +59,18 @@ export const Home = () => {
             </div>
 
             <div id="left-slide" style={{ display: 'none' }}  >
-                <button style={{ height: '3rem', marginTop: '1rem' }}  onClick={()=> NavPos('about')} > About </button>
-                <button style={{ height: '3rem' }} onClick={() => NavPos('projects')} > Projects </button>
-                <button style={{ height: '3rem' }} onClick={()=> NavPos( 'skills' )} > Skills </button>
-                <button style={{ height: '3rem' }} onClick={()=> NavPos('certifications' )} > Certifications </button>
+                <button style={{ height: '3rem', marginTop: '1rem' }}  onClick={()=> NavPos('about-cursor')} > About </button>
+                <button style={{ height: '3rem' }} onClick={() => NavPos('projects-cursor')} > Projects </button>
+                <button style={{ height: '3rem' }} onClick={()=> NavPos( 'skills-cursor' )} > Skills </button>
+                <button style={{ height: '3rem' }} onClick={()=> NavPos('certifications-cursor' )} > Certifications </button>
                 <button style={{ height: '3rem' }} onClick={()=> NavPos( 'contact' )} > Contact </button>
             </div>
 
             <nav>
-                <a className='nav-link'  href="#about" >About</a>
-                <a className='nav-link' href="#projects" >Projects</a>
-                <a className='nav-link' href="#skills">Skills</a>
-                <a className='nav-link' href="#certifications">Certifications</a>
+                <a className='nav-link'  href="#about-cursor" >About</a>
+                <a className='nav-link' href="#projects-cursor" >Projects</a>
+                <a className='nav-link' href="#skills-cursor">Skills</a>
+                <a className='nav-link' href="#certifications-cursor">Certifications</a>
                 <a className='nav-link' href="#contact">Contact</a>
             </nav>
 
@@ -82,6 +82,8 @@ export const Home = () => {
                 </div>
                 <img id="photo" src={photo1} style={{borderRadius: "40%"}} alt='i am lost' />
             </header>
+
+            <div id='about-cursor' ></div>
 
             <section id="about"  >
                 <div style={{ fontSize: "1.5rem", color: "rgb(0, 21, 45)", fontWeight: "700" }} > About Me </div>
@@ -98,7 +100,7 @@ export const Home = () => {
 
             </section>
 
-
+            <div id='projects-cursor' ></div>
 
             <section id="projects" style={{ marginTop: '4rem', marginLeft: '2rem', marginRight: '2rem' }} >
             <div className="head1" style={{ textAlign: 'center', marginBottom: '1rem'}} > Projects </div>
@@ -150,8 +152,10 @@ export const Home = () => {
                     
                 </div>
             </div>
-        </section>
+            </section>
 
+
+            <div id='skills-cursor' ></div>
         <section id="skills" style={{ marginTop: '4rem', marginLeft: '2rem', marginRight: '2rem' }}  >
             <div  className="head1" >  Skills </div>
             <div className="skill-container"  >
@@ -177,6 +181,9 @@ export const Home = () => {
                 </div>
             </div>
         </section>
+
+
+            <div id='certifications-cursor' ></div>
 
         <section id="certifications"   >
             <div  className="head1"  >  Certifications </div>
