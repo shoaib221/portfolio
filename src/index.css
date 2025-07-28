@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-/**********************   slide in ***************************/
+/**********************   slide in   ***************************/
 
 @keyframes slidein {
     from { transform: translateX(-100%); }
@@ -33,6 +33,8 @@
 :root {
     --color1: rgb(0, 21, 45);
     --color2: rgb(0, 46, 84);
+    --color3: rgb(168, 195, 218);
+    --color4: white;
 }
 
 
@@ -43,8 +45,8 @@ html {
 
 body {
     margin: 0px;
-    max-width: 1800px; 
-    margin-left: auto; 
+    max-width: 1800px;
+    margin-left: auto;
     margin-right: auto;
 }
 
@@ -97,17 +99,18 @@ header {
     }
 
     nav {
-        height: 2.5rem; 
+        height: 2.5rem;
         display: flex; 
         justify-content: space-evenly; 
         align-items: center;
         position: fixed;
         top: 0px;
         background-color: var(--color1);
-        color: white;
+        color: var(--color4);
         width: 100%;
         z-index: 20;
     }
+
 
 .small-nav {
     display: none;
@@ -115,7 +118,7 @@ header {
 
 .nav-link {
     text-decoration: none; 
-    color: white;
+    color: var(--color4);
     font-weight: 600;
     font-size: .8rem;
 }
@@ -128,11 +131,11 @@ navbutton {
     height: 15rem;
     width: 11.5rem;
     transition: transform 1s;
-    background-color: red;
+    background-color: var(--color4);
 }
 
 #photo:hover {
-    transform: translateY(-.3rem);
+    transform: translateY(-.2rem);
 }
 
 
@@ -158,7 +161,7 @@ navbutton {
     /* border: 1px solid black; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: .5rem;
-    background-color: rgb(0, 46, 84, .3);
+    background-color: var(--color3);
     border-radius: .5rem;
     display: flex;
     flex-direction: column;
@@ -166,14 +169,14 @@ navbutton {
 
 .skill-container {
     gap: 1rem;
-    display: flex; 
-    flex-wrap: wrap; 
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .skill-card-header {
     text-align: center; 
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     margin-bottom: .5rem;
 }
 
@@ -185,8 +188,7 @@ navbutton {
 .experience-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    
+    gap: 1rem;    
 }
 
 #certifications {
@@ -205,37 +207,39 @@ navbutton {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    
 }
 
 .skill-card {
     width: 18rem;
-    box-shadow: 0 .2rem .3rem 0 rgba(0, 0, 0, 0.2), 0 .2rem 1rem 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: .3rem;
-    background-color: rgb(0, 46, 84, .3);
+    background-color: var(--color3);
     flex-grow: 1;
     border-radius: .5rem;
 }
 
 
 .btn1 {
-    background-color: var(--color2);
+    background-color: var(--color3);
+    
     border-radius: .5rem;
-    height: 2rem;
-    width: 5rem;
+    height: 1.5rem;
+    width: 4rem;
     margin-top: auto;
     margin-left: auto;
     margin-right: .5rem;
     font-size: .75rem;
+    font-weight: 540;
     padding: 0px;
-    color: white;
+    color: black;
     transition: color .5s, background-color .5s, font-weight .5s;
 }
 
+
 .btn1:hover {
-    background-color: white;
-    color: var(--color2);
-    font-weight: 600;
+    background-color: var(--color1);
+    color: white;
+    font-weight: 500;
 }
 
 
@@ -245,16 +249,19 @@ navbutton {
     margin-bottom: .5rem;
 }
 
+
 #footer {
     margin-top: 4rem; 
     background-color: rgb(0, 21, 45); 
     color: white;
 }
 
+
 #footerl a{
     text-decoration: none;
     color: white;
 }
+
 
 #footerl {
     display: grid;
@@ -264,12 +271,9 @@ navbutton {
     font-size: .7rem;
 }
 
-.btn2 {
-    background-color: white;
-    color: var(--color1);
-    font-size: .8rem;
-    padding: .5rem;
-}
+
+
+
 
 #contact {
     text-align: center; 
@@ -277,9 +281,11 @@ navbutton {
     margin-bottom: 2rem;
 }
 
+
 #left-slide {
     display: none;
 }
+
 
 /* ################################# Tablet ################################### */
 

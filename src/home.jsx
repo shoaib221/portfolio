@@ -86,19 +86,19 @@ export const Home = () => {
             <div id='about-cursor' ></div>
 
             <section id="about"  >
-                <div style={{ fontSize: "1.5rem", color: "rgb(0, 21, 45)", fontWeight: "700" }} > About Me </div>
-                <p style={{ backgroundColor: "rgb(0, 46, 84, .3)", width: "80%", textAlign: 'center', margin: "auto", marginTop: "1rem",
+                <div style={{ fontSize: "1.5rem", color: "var(--color1)", fontWeight: "700" }} > About Me </div>
+                <p style={{ backgroundColor: "var(--color3)", width: "80%", textAlign: 'center', margin: "auto", marginTop: "1rem",
                 boxShadow: "0 .2rem .3rem 0 rgba(0, 0, 0, 0.2), 0 .2rem 1rem 0 rgba(0, 0, 0, 0.2)", padding: ".5rem", borderRadius: '.5rem' }} >
                     I am a Software Engineering enthusiast with experience in competitve programming & web development. I am currently looking forward to landing a job which will keep me veryy busy.
                     <br/>
                     <button className="btn1" style={{marginTop: '.5rem'}} onClick={ () => window.open(pdfCV, '_blank') } >
-                    MY CV
+                        Resume
                     </button>
+                    
                 </p>
-
-                
-
             </section>
+
+            
 
             <div id='projects-cursor' ></div>
 
@@ -183,7 +183,7 @@ export const Home = () => {
         </section>
 
 
-            <div id='certifications-cursor' ></div>
+        <div id='certifications-cursor' ></div>
 
         <section id="certifications"   >
             <div  className="head1"  >  Certifications </div>
@@ -225,11 +225,11 @@ export const Home = () => {
 
 
         <footer id="footer"  >
-            <div id="contact"  > Contact </div>        
+            <div id="contact"  > Contact </div>
             {/* <div style="display: flex; justify-content: space-evenly; padding-bottom: 2rem;" > */}
             
             <div id="footerl" >
-                <div style={{ textAlign: 'center' }} >  
+                <div style={{ textAlign: 'center' }} >
                     <img src={pmail} style={{ height: '1.5rem', width: '2rem' }} />
                     <br/>  shoaibtasrif326@gmail.com
                 </div>
