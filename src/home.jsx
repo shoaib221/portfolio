@@ -94,7 +94,6 @@ export const Home = () => {
                     <button className="btn1" style={{marginTop: '.5rem'}} onClick={ () => window.open(pdfCV, '_blank') } >
                         Resume
                     </button>
-                    
                 </p>
             </section>
 
@@ -146,10 +145,7 @@ export const Home = () => {
                         <button className="btn1" onClick={ () => window.open('https://github.com/shoaib221/LiveChat' , '_blank' ) } >
                             Source
                         </button> 
-
-                         
                     </div>
-                    
                 </div>
             </div>
             </section>
