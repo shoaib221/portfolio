@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.a798be03.css",
-    "main.js": "/portfolio/static/js/main.8cbf6a3f.js",
+    "main.css": "/portfolio/static/css/main.d606ad4a.css",
+    "main.js": "/portfolio/static/js/main.e4cebd14.js",
     "static/js/453.8ab44547.chunk.js": "/portfolio/static/js/453.8ab44547.chunk.js",
     "static/media/problem_solving_intermediate_certificate.pdf": "/portfolio/static/media/problem_solving_intermediate_certificate.9ea89d0203d75f22cc04.pdf",
     "static/media/sql_advanced certificate.pdf": "/portfolio/static/media/sql_advanced certificate.d100b4d475517d7cb5e4.pdf",
     "static/media/Md Shoaib Tasrif Emon.jpg": "/portfolio/static/media/Md Shoaib Tasrif Emon.9e1f25d38eb10b2d4579.jpg",
-    "static/media/Resume_Md_Shoaib_Tasrif.pdf": "/portfolio/static/media/Resume_Md_Shoaib_Tasrif.45a0b20e7f50b7094bca.pdf",
+    "static/media/Resume_Md_Shoaib_Tasrif.pdf": "/portfolio/static/media/Resume_Md_Shoaib_Tasrif.3f3ec3505a208cd17f67.pdf",
     "index.html": "/portfolio/index.html",
-    "main.a798be03.css.map": "/portfolio/static/css/main.a798be03.css.map",
-    "main.8cbf6a3f.js.map": "/portfolio/static/js/main.8cbf6a3f.js.map",
+    "main.d606ad4a.css.map": "/portfolio/static/css/main.d606ad4a.css.map",
+    "main.e4cebd14.js.map": "/portfolio/static/js/main.e4cebd14.js.map",
     "453.8ab44547.chunk.js.map": "/portfolio/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a798be03.css",
-    "static/js/main.8cbf6a3f.js"
+    "static/css/main.d606ad4a.css",
+    "static/js/main.e4cebd14.js"
   ]
 }
