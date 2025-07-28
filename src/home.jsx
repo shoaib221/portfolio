@@ -53,7 +53,7 @@ export const Home = () => {
 	return (
 		<>
             <div className='small-nav' >
-                <button  style={{ height: '100%', marginLeft: '1rem' }} onClick={SlideIn} >
+                <button  style={{ height: '100%', marginLeft: '1rem', backgroundColor: 'var(--color1)', color: 'white' }} onClick={SlideIn} >
                 Menu
                 </button>
             </div>
@@ -80,7 +80,7 @@ export const Home = () => {
                     <div  style={{color:"rgb(0, 46, 84)", fontWeight: "800" }}  >MD <span style={{color: "rgb(0, 21, 45)" }} >SHOAIB</span> TASRIF</div>
                     <span style={{fontSize: "1.3rem" }} > Software Developer </span> 
                 </div>
-                <img id="photo" src={photo1} style={{borderRadius: "30%"}} alt='i am lost' />
+                <img id="photo" src={photo1} style={{borderRadius: "40%"}} alt='i am lost' />
             </header>
 
             <section id="about"  >
@@ -120,7 +120,7 @@ export const Home = () => {
                 <div className="project-card" > 
                     <div style={{ fontSize: '1.25rem', fontWeight: '600' }} > Amazon Clone </div>
                     <p className="aha"  >
-                        It is a clone of amazon.com made with HTML & CSS.
+                        It is a clone of amazon.com made with React.js.
                     </p>
 
                     <div style={{ marginTop: 'auto' }}>
@@ -135,19 +135,17 @@ export const Home = () => {
                     
                 </div>
                 <div className="project-card" > 
-                    <div style={{ fontSize: '1.25rem', fontWeight: '600' }} > Flower Shop </div>
+                    <div style={{ fontSize: '1.25rem', fontWeight: '600' }} > Live Chat </div>
                     <p className="aha"  >
-                        It is a template webpage for a flower shop made with HTML & CSS.
+                        It is application for chatting with individuals and groups. It is made with MongoDB, Express.js & React.js.
                     </p>
 
                     <div style={{ marginTop: 'auto' }}>
-                        <button className="btn1" onClick={ () => window.open('https://github.com/shoaib221/B12A02-Responsive-Flowers', '_blank' ) } >
+                        <button className="btn1" onClick={ () => window.open('https://github.com/shoaib221/LiveChat' , '_blank' ) } >
                             Source
                         </button> 
 
-                        <button className="btn1" onClick={ () => window.open('https://shoaib221.github.io/B12A02-Responsive-Flowers', '_blank' ) } >
-                            Live
-                        </button> 
+                         
                     </div>
                     
                 </div>
@@ -195,7 +193,7 @@ export const Home = () => {
                     </object>  */}
 
                     <p className='skill-card-des' >
-                        Issued by Hackerrank <br/>on August 2023 
+                        Issued by Hackerrank on August 2023 
                     </p>
 
                     <button className="btn1" style={{marginRight: 'auto'}} onClick={ () => window.open(csql, '_blank') } >
@@ -205,10 +203,10 @@ export const Home = () => {
                 </div>
 
                 <div className="project-card" >
-                    <div className='skill-card-header' > Problem Solving <br/> (Intermediate) </div>
+                    <div className='skill-card-header' > Problem Solving (Intermediate) </div>
                     
                     <p className='skill-card-des' >
-                        Issued by Hackerrank <br/>on August 2023 
+                        Issued by Hackerrank on August 2023 
                     </p>
 
                     <button className="btn1" style={{marginRight: 'auto'}} onClick={ () => window.open(cpsi, '_blank') } >

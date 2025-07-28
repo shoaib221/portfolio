@@ -64,7 +64,7 @@ header {
     background-position: top left;
     background-repeat: no-repeat;
     background-size:contain;
-    
+    margin-top: 4rem;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -82,34 +82,42 @@ header {
     to {  width: 12.2rem; }
 }
 
-#myname {
-    text-align: left;
-    display: inline-block;
-    width: 12.2rem;
-    font-size: 2rem;
-    display: block;
-    font-family: monospace;
-    animation: anim1 3s steps(9)  alternate 1;
-    white-space: nowrap;
-    overflow: hidden;
-    /* border: 1px solid black; */
-    letter-spacing: .25rem;
-}
+    #myname {
+        text-align: left;
+        display: inline-block;
+        width: 12.2rem;
+        font-size: 2rem;
+        display: block;
+        font-family: monospace;
+        animation: anim1 3s steps(9)  alternate 1;
+        white-space: nowrap;
+        overflow: hidden;
+        /* border: 1px solid black; */
+        letter-spacing: .25rem;
+    }
 
     nav {
-    height: 5rem; 
-    display: flex; 
-    justify-content: space-evenly; 
-    align-items: center;
-}
+        height: 2.5rem; 
+        display: flex; 
+        justify-content: space-evenly; 
+        align-items: center;
+        position: fixed;
+        top: 0px;
+        background-color: var(--color1);
+        color: white;
+        width: 100%;
+        z-index: 20;
+    }
 
 .small-nav {
     display: none;
 }
 
 .nav-link {
-    text-decoration: none; color: var(--color1);
+    text-decoration: none; 
+    color: white;
     font-weight: 600;
+    font-size: .8rem;
 }
 
 navbutton {
@@ -350,7 +358,7 @@ navbutton {
         height: 3rem;
         width: 100%;
         z-index: 2;
-        background-color: white;
+        background-color: var(--color1);
     }
 
     nav {
