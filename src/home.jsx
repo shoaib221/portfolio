@@ -24,12 +24,11 @@ export const Home = () => {
             elem.style.display = 'flex'
             
             elem.classList.add('slidein')
-
+            
         } else {
             elem.classList.remove( 'slidein' )
             elem.classList.add('slideout')
             setTimeout( ()=> { elem.style.display = 'none' }, 300 )
-            
         }   
     }
 
@@ -238,11 +237,7 @@ export const Home = () => {
                     <br/> <a href="https://github.com/shoaib221" target="_blank"> shoaib221 </a> 
                 </div>
 
-                {/* <div style={{ textAlign: 'center' }} >
-                    <FontAwesomeIcon icon={faBook} style={{ height: '1.5rem', width: '1.5rem' }} />
-                    <br/>
-                    <a href='https://drive.google.com/drive/folders/1Dol8U92QpdkzDkrS6MnbWJafnCtbglIy?usp=sharing' target="_blank" >Books</a>
-                </div> */}
+                
             </div>
         
         </footer>
