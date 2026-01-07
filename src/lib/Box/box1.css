@@ -14,4 +14,7 @@
     box-shadow:
         0 0 .5rem var(--shadow-1),
         0 0 1rem var(--shadow-2);
+    border-radius: 10px;
 }
+
+

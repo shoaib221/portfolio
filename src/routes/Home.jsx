@@ -1,30 +1,43 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useTheme } from '../lib/Theme/Theme';
 import '../lib/animation/animation1.css'
+import { Banner, About, Skill, Project, Achievement, Contact } from './compo.jsx'
+import { useNavContext } from '../lib/Nav/Nav4.jsx';
 
 
 export const Home = () => {
     
     const { ThemeChoice, ThemeButton2 } = useTheme()
+    const { Dropdown } = useNavContext();
+
 
     return (
         <div className='block flex-grow relative  w-full' >
-            <div className='h-90  w-full flex flex-col sm:flex-row-reverse' >
-                <div className='h-60 w-60 rounded-full bg-contain bg-top bg-no-repeat' style={{ backgroundImage: `url(/shoaib2.jpg)` }} >
-
-                </div>
-
-                <div>
-                    
-                </div>
-
-                
-
-            </div>
+            
+            <Dropdown />
+            
+            <Banner />
+            <br/>
+            
+            <About />
+            <br/>
 
             
+            <Skill />
+            <br/>
 
             
+            <Project />
+            <br/>
+
+            
+            <Achievement />
+            <br/>
+
+            
+            <Contact />
+            <br/>
+
         </div>
     );
 };

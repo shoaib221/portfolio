@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import './context-style.css';
+import './context.css';
 import { motion } from "framer-motion";
 
 const NavContext = createContext();

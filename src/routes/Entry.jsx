@@ -1,19 +1,15 @@
 import { Outdent } from 'lucide-react';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { use, useContext, useEffect, useState } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { Nav } from '../lib/Nav/Nav.jsx';
 import { Footer } from '../lib/Nav/Footer.jsx';
 import "./project.css";
-import { useNavContext } from '../lib/Nav/context.jsx';
-import { useAuthContext } from '../lib/auth/context.jsx';
-import { ReactHookFormExample } from '../lib/react-hook-form/react-hook-form.jsx';
-import { SwiperDemo }  from '../lib/Swiper/swiper.jsx';
-
+import { useNavContext} from '../lib/Nav/Nav4.jsx';
 
 
 export const Entry = () => {
     
-    const {  DownWindowTag } = useNavContext();
+    const { Nav } = useNavContext();
     
 
     // useEffect(() => {
@@ -27,16 +23,16 @@ export const Entry = () => {
     // }
 
     return (
-        <>
+        <div className='flex flex-col items-start min-h-screen w-full max-w-[1400px] mx-auto' >
             <Nav />
-            <div className='flex-grow relative overflow-auto p-4 flex flex-col' >
-                <DownWindowTag />
-                <Outlet />
-            </div>
-            <Footer />
+            
+                
+            <Outlet />
+            
+            
 
             {/* <div onClick={ scrollToTop } className='fixed bottom-4 right-4 z-5' >Back To Top</div> */}
-        </>
+        </div>
     );
 };
 

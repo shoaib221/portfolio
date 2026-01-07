@@ -1,5 +1,5 @@
 import React, { use, useEffect, useState } from 'react';
-import './auth-style.css';
+import './auth.css';
 import { EmailLogin, EmailRegister } from './Email';
 import { GoogleLogin } from './Google';
 import { GithubLogin } from './Github';

@@ -6,10 +6,10 @@ import { ToastContainer } from 'react-toastify';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 
 import { NotFound } from './lib/miscel/NotFound.jsx';
-import { NavProvider } from './lib/Nav/context.jsx';
+import { NavProvider } from './lib/Nav/Nav4.jsx';
 
 
-import './lib/Box/box.css';
+import './lib/Box/box1.css';
 import './index.css';
 import "./lib/Buttons/button.css";
 import './lib/Theme/Theme.css'
