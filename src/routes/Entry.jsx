@@ -5,11 +5,13 @@ import { Nav } from '../lib/Nav/Nav.jsx';
 import { Footer } from '../lib/Nav/Footer.jsx';
 import "./project.css";
 import { useNavContext} from '../lib/Nav/Nav4.jsx';
+import { Home } from './Home.jsx';
 
 
 export const Entry = () => {
     
     const { Nav } = useNavContext();
+    const { Dropdown } = useNavContext();
     
 
     // useEffect(() => {
@@ -22,18 +24,7 @@ export const Entry = () => {
     //     window.scrollTo({ top: 0, behavior: 'smooth' });
     // }
 
-    return (
-        <div className='flex flex-col items-start min-h-screen w-full max-w-[1400px] mx-auto' >
-            <Nav />
-            
-                
-            <Outlet />
-            
-            
-
-            {/* <div onClick={ scrollToTop } className='fixed bottom-4 right-4 z-5' >Back To Top</div> */}
-        </div>
-    );
+    return <Home />
 };
 
 

@@ -1,42 +1,65 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useTheme } from '../lib/Theme/Theme';
 import '../lib/animation/animation1.css'
-import { Banner, About, Skill, Project, Achievement, Contact } from './compo.jsx'
+import { Banner, About, Skill, Project, Achievement, Experience } from './compo.jsx'
 import { useNavContext } from '../lib/Nav/Nav4.jsx';
+import { IoMenu } from "react-icons/io5";
+
 
 
 export const Home = () => {
-    
+
     const { ThemeChoice, ThemeButton2 } = useTheme()
-    const { Dropdown } = useNavContext();
+
+    const [board, setBoard] = useState("intro")
+    const [sideMenu, setSideMenu] = useState(false)
 
 
     return (
-        <div className='block flex-grow relative  w-full' >
-            
-            <Dropdown />
-            
+        <div className='flex flex-col lg:flex-row grow relative  w-full pt-12' >
+
+            {/* small screen */}
+            <div className={`fixed w-full h-full block lg:hidden bg-(--color4) text-(--color1) z-30 side-bar ${ sideMenu ? 'show': "" } flex flex-col gap-4 items-center`} >
+                <div className={`cursor-pointer ${ board=== 'intro' && 'border-b-1' }`} onClick={() => {setSideMenu(false); setBoard("intro");} } >Introduction</div>
+                <div className={`cursor-pointer ${ board=== 'project' && 'border-b-1' }`} onClick={() => {setSideMenu(false); setBoard("project");} } >Project</div>
+                <div className={`cursor-pointer ${ board=== 'skill' && 'border-b-1' }`} onClick={() => {setSideMenu(false); setBoard("skill"); } } >Skill</div>
+                <div className={`cursor-pointer ${ board=== 'achievement' && 'border-b-1' }`} onClick={() => {setSideMenu(false); setBoard("achievement");} } >Achievement</div>
+                <div className={`cursor-pointer ${ board=== 'experience' && 'border-b-1' }`} onClick={() => {setSideMenu(false); setBoard("experience");} } >Experience</div>
+            </div>
+
+            <nav className='fixed top-0 left-0 right-0 bg-(--color4) text-(--color1) h-12 z-30' >
+
+                <div className='hidden lg:flex justify-evenly items-center h-12' >
+                    <div className={`cursor-pointer ${ board=== 'intro' && 'border-b-1' }`} onClick={() => setBoard("intro")} >Introduction</div>
+                    <div className={`cursor-pointer ${ board=== 'project' && 'border-b-1' }`} onClick={() => setBoard("project")} >Project</div>
+                    <div className={`cursor-pointer ${ board=== 'skill' && 'border-b-1' }`} onClick={() => setBoard("skill")} >Skill</div>
+                    <div className={`cursor-pointer ${ board=== 'achievement' && 'border-b-1' }`} onClick={() => setBoard("achievement")} >Achievement</div>
+                    <div className={`cursor-pointer ${ board=== 'experience' && 'border-b-1' }`} onClick={() => setBoard("experience")} >Experience</div>
+
+                </div>
+
+                <IoMenu className='block lg:hidden text-2xl m-3' onClick={ () => setSideMenu(prev => !prev) } />
+                
+            </nav>
+
+
+
+
             <Banner />
-            <br/>
-            
-            <About />
-            <br/>
 
-            
-            <Skill />
-            <br/>
 
-            
-            <Project />
-            <br/>
 
-            
-            <Achievement />
-            <br/>
+            {board === "intro" && <About />}
+            {board === "skill" && <Skill />}
+            {board === "project" && <Project />}
+            {board === "achievement" && <Achievement />}
+            {board === "experience" && <Experience />}
 
-            
-            <Contact />
-            <br/>
+
+
+
+
+
 
         </div>
     );

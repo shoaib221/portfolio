@@ -65,3 +65,26 @@
 .button-3:hover {
     opacity: .8;
 }
+
+.button-4 {
+    color: var(--color4);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button-4:hover {
+    opacity: .7;
+}
+
+
+
+.button-5 {
+    
+    color: var(--color4);
+    cursor: pointer;
+}
+
+.button-5:hover {
+    text-decoration: underline;
+    
+}
