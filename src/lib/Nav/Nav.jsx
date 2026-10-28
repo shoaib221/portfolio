@@ -2,7 +2,7 @@ import React, { useEffect, useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGithub } from 'react-icons/fa';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { SignOut } from '../auth/auth';
+
 import './Nav.css';
 import { useNavContext } from './context.jsx';
 import { Breaker } from '../miscel/Breaker.jsx';
